@@ -15,6 +15,7 @@ class CreateCakesTable extends Migration
     {
         Schema::create('cakes', function (Blueprint $table) {
             $table->id();
+            $table->boolean("is_active")->default(1);
             $table->string("name", 255);
             $table->decimal("weight", 8, 2);
             $table->decimal("value", 8, 2);
