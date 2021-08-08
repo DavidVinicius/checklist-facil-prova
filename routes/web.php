@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CakeController;
+use App\Http\Controllers\InterestedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/cakes/{id}', [CakeController::class, "getCake"])->name("cakes.get")
 Route::post('/cakes', [CakeController::class, "create"])->name("cakes.store");
 Route::put('/cakes/{id}', [CakeController::class, "update"])->name("cakes.update");
 Route::delete('/cakes/{id}', [CakeController::class, "destroy"])->name("cakes.destroy");
+
+Route::post('/cakes/{id}/subscribe', [InterestedController::class, "subscribe"])->name("cakes.subcribe");
+Route::delete('/cakes/{id}/unsubscribe', [InterestedController::class, "unsubscribe"])->name("cakes.unsubcribe");

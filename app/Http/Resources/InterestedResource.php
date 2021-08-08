@@ -15,7 +15,8 @@ class InterestedResource extends JsonResource
     public function toArray($request)
     {
         return [
-            "email" => $this->email
+            "email" => $this->email,
+            "subscribed_at" => (new \DateTime($this->created_at))->format("Y-m-d H:i:s")
         ];
     }
 }

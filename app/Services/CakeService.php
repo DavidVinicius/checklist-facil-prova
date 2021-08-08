@@ -38,4 +38,9 @@ class CakeService
         $cake = Cake::findOrFail($id);
         return $cake->delete();
     }
+
+    public function cakeExists($cake_id)
+    {
+        return (new CakeRepository)->exists($cake_id);
+    }
 }

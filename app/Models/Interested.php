@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Interested extends Model
-{
+{    
     use HasFactory;
+
+    protected $fillable = ["email", "cake_id"];
 }
