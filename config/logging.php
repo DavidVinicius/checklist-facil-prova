@@ -53,6 +53,19 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => 14,
         ],
+        
+        'subscriptions' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/subscriptions.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
+        'cakes' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/subscriptions.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 14,
+        ],
 
         'slack' => [
             'driver' => 'slack',
