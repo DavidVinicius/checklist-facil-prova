@@ -28,8 +28,7 @@ class InterestedTest extends TestCase
             "email" => "teste@teste.com"
         ]);
 
-        $response  
-        ->dump()      
+        $response          
         ->assertStatus(201);
     }
     
